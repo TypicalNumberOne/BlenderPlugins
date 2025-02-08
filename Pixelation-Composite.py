@@ -72,6 +72,7 @@ class NODE_OT_add_pixelate_composite(bpy.types.Operator):
         # 7. Composite 节点
         comp = tree.nodes.new(type="CompositorNodeComposite")
         comp.location = (1000, 0)
+        comp.use_alpha = True
 
         # 8. Viewer 节点
         viewer = tree.nodes.new(type="CompositorNodeViewer")
